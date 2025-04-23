@@ -1,32 +1,267 @@
-class BuilderMainPart {
-	constructor (data) {
-		this._id = data.id;
-		this._name = data.name;
-		this._description = data.description;
-		this._time = data.time;
-		this._servings = data.servings;
-		this._ustensils = data.ustensils;
-		this._ingredients = data.ingredients;
-		this._appliance = data.appliance;
-        this._category = data.category;
-        this._image = data.image;
-        this._veggie = data.veggie;
+/**
+ * Generate recipe's cards from database
+ * @param {Array} recipes - recipes database
+ * @param {string} containerId - Container id to include cards
+ * @param {string} detailsBaseUrl - url basis for recipe details pages
+ */
+function generateRecipeCards(recipes, containerId, detailsBaseUrl = '/recette/') {
+	const container = document.getElementById(containerId);
+	
+	if (!container) {
+	  console.error(`Conteneur "${containerId}" introuvable`);
+	  return;
 	}
-
-	// Create recipe cards
-
-	get createMainPart () {
-		const recipeCard = createDomElements(
-			"article",
-			{ class: "recipes-main-article-card" },
-			createDomElements("img", { class: "recipes-main-article-card-image" }),
-			createDomElements("h2", `${this._name}`, { class: "recipes-main-article-card-title" }),
-			createDomElements("p",	`${this._time}min `, { class: "recipe-main-article-card-time" },
-				createDomElements("i", { class: "fas fa-clock recipe-main-article-card-icon" })
-			),
-
-            createDomElements("p", `${this._description}`, { class: "recipe-main-article-card-description" })
-		);
-		return recipeCard;
+	
+	// cleaning existing container
+	container.innerHTML = '';
+	
+	// Display a message if no recipe is found
+	if (recipes.length === 0) {
+	  container.innerHTML = '<div class="no-results">Aucune recette trouvée pour cette recherche.</div>';
+	  return;
+	}
+	
+	// Use fragment to increase performance
+	const fragment = document.createDocumentFragment();
+	
+	// Generate recipe cards
+	recipes.forEach(recipe => {
+	  // Create card
+	  const card = document.createElement('article');
+	  card.className = 'recipe-card';
+	  
+	  // Card template
+	  card.innerHTML = `
+		<div class="recipe-image-container">
+		  <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image">
+		  ${recipe.vegetarian ? `
+			<div class="vegetarian-badge" title="Recette végétarienne">
+			  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#4CAF50">
+				<path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z M15,6h-3v10h-2V6H7v2 h2v8h6v-8h2V6z"/>
+			  </svg>
+			</div>
+		  ` : ''}
+		</div>
+		<div class="recipe-content">
+		  <span class="category-tag category-${recipe.category}">${recipe.category}</span>
+		  <h3 class="recipe-title">${recipe.title}</h3>
+		  <p class="recipe-description">${recipe.description}</p>
+		  <div class="recipe-duration">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#666">
+			  <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+			  <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+			</svg>
+			<span>${formatDuration(recipe.duration)}</span>
+		  </div>
+		  <a href="${detailsBaseUrl}${recipe.id}" class="view-recipe-btn" data-recipe-id="${recipe.id}">Voir la recette</a>
+		</div>
+	  `;
+	  
+	  // Add card to fragment
+	  fragment.appendChild(card);
+	});
+	
+	// Add fragment to container
+	container.appendChild(fragment);
+}
+  
+/**
+* format duration in hours & minutes
+* @param {number} minutes - duration in minutes
+* @return {string} formated duration
+*/
+function formatDuration(minutes) {
+	if (!minutes && minutes !== 0) return '';
+	
+	if (minutes < 60) {
+	  return `${minutes} min`;
+	}
+	
+	const hours = Math.floor(minutes / 60);
+	const remainingMinutes = minutes % 60;
+	
+	return remainingMinutes ? `${hours} h ${remainingMinutes} min` : `${hours} h`;
+}
+  
+/**
+* Create & set a search bar for recipes
+* @param {string} containerId - Container id to include the search bar
+* @param {Array} recipes - Database for recipes
+* @param {string} resultsContainerId - Container id where display results
+* @param {Object} options - More options
+*/
+function createRecipeSearchBar(containerId, recipes, resultsContainerId, options = {}) {
+	const container = document.getElementById(containerId);
+	
+	if (!container) {
+	  console.error(`Conteneur "${containerId}" introuvable`);
+	  return;
+	}
+	
+	// Default settings
+	const config = {
+	  detailsBaseUrl: '/recette/',
+	  useRealTimeSearch: true,
+	  debounceDelay: 300,
+	  ...options
 	};
-};
+	
+	// Create HTML basis for search bar
+	container.innerHTML = `
+	  <form class="recipe-search-form" id="recipe-search-form">
+		<div class="search-input-group">
+		  <input type="text" id="recipe-search-input" class="recipe-search-input" placeholder="Rechercher une recette...">
+		  <button type="submit" class="recipe-search-button">
+			<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			  <circle cx="11" cy="11" r="8"></circle>
+			  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+			</svg>
+		  </button>
+		</div>
+		
+		<div class="advanced-filters">
+		  <button type="button" class="advanced-toggle">Filtres avancés</button>
+		  <div class="advanced-filters-panel">
+			<div class="filter-group">
+			  <label for="ingredient-filter">Ingrédient:</label>
+			  <input type="text" id="ingredient-filter" class="filter-input" placeholder="ex: tomate, poulet...">
+			</div>
+			
+			<div class="filter-group">
+			  <label for="category-filter">Catégorie:</label>
+			  <select id="category-filter" class="filter-select">
+				<option value="">Toutes les catégories</option>
+				${[...new Set(recipes.map(recipe => recipe.category))]
+				  .map(category => `<option value="${category}">${category.charAt(0).toUpperCase() + category.slice(1)}</option>`)
+				  .join('')}
+			  </select>
+			</div>
+			
+			<div class="filter-group checkbox-group">
+			  <input type="checkbox" id="vegetarian-filter" class="filter-checkbox">
+			  <label for="vegetarian-filter">Recettes végétariennes uniquement</label>
+			</div>
+			
+			<div class="filter-group">
+			  <label for="duration-filter">Durée maximale (min):</label>
+			  <input type="number" id="duration-filter" class="filter-input" min="5" max="180" placeholder="ex: 30">
+			</div>
+			
+			<button type="button" class="reset-filters-btn">Réinitialiser les filtres</button>
+		  </div>
+		</div>
+	  </form>
+	  <div id="results-counter" class="results-counter">${recipes.length} recettes trouvées</div>
+	`;
+	
+	// Get elements
+	const form = document.getElementById('recipe-search-form');
+	const searchInput = document.getElementById('recipe-search-input');
+	const ingredientInput = document.getElementById('ingredient-filter');
+	const categorySelect = document.getElementById('category-filter');
+	const vegetarianCheck = document.getElementById('vegetarian-filter');
+	const durationInput = document.getElementById('duration-filter');
+	const resetButton = document.querySelector('.reset-filters-btn');
+	const advancedToggle = document.querySelector('.advanced-toggle');
+	const advancedFiltersPanel = document.querySelector('.advanced-filters-panel');
+	const resultsCounter = document.getElementById('results-counter');
+	
+	// Searching functions
+	function performSearch() {
+	  const searchTerm = searchInput.value.toLowerCase().trim();
+	  const ingredientTerm = ingredientInput.value.toLowerCase().trim();
+	  const categoryFilter = categorySelect.value;
+	  const vegetarianOnly = vegetarianCheck.checked;
+	  const maxDuration = durationInput.value ? parseInt(durationInput.value, 10) : null;
+	  
+	  // Filter recipes
+	  const filteredRecipes = recipes.filter(recipe => {
+		// Filter by name & description
+		if (searchTerm && !(
+		  recipe.title.toLowerCase().includes(searchTerm) ||
+		  recipe.description.toLowerCase().includes(searchTerm)
+		)) {
+		  return false;
+		}
+		
+		// Filter by ingredient
+		if (ingredientTerm) {
+		  const hasIngredient = recipe.ingredients.some(ingredient => 
+			ingredient.name.toLowerCase().includes(ingredientTerm)
+		  );
+		  
+		  if (!hasIngredient) {
+			return false;
+		  }
+		}
+		
+		// Filter by category
+		if (categoryFilter && recipe.category !== categoryFilter) {
+		  return false;
+		}
+		
+		// Filter veggie
+		if (vegetarianOnly && !recipe.vegetarian) {
+		  return false;
+		}
+		
+		// Filter by max duration
+		if (maxDuration && recipe.duration > maxDuration) {
+		  return false;
+		}
+		
+		return true;
+	  });
+	  
+	  // Update result count
+	  const count = filteredRecipes.length;
+	  resultsCounter.textContent = `${count} recette${count > 1 ? 's' : ''} trouvée${count > 1 ? 's' : ''}`;
+	  
+	  // Generate filtered recipes' cards
+	  generateRecipeCards(filteredRecipes, resultsContainerId, config.detailsBaseUrl);
+	}
+	
+	// Debouncing function to limitate repeated call
+	function debounce(func, delay) {
+	  let timer;
+	  return function(...args) {
+		clearTimeout(timer);
+		timer = setTimeout(() => func.apply(this, args), delay);
+	  };
+	}
+	
+	// Event listeners
+	form.addEventListener('submit', e => {
+	  e.preventDefault();
+	  performSearch();
+	});
+	
+	// Toggle for advanced filters
+	advancedToggle.addEventListener('click', () => {
+	  advancedFiltersPanel.classList.toggle('show');
+	  advancedToggle.classList.toggle('active');
+	});
+	
+	// Reinitialized filters
+	resetButton.addEventListener('click', () => {
+	  searchInput.value = '';
+	  ingredientInput.value = '';
+	  categorySelect.value = '';
+	  vegetarianCheck.checked = false;
+	  durationInput.value = '';
+	  performSearch();
+	});
+	
+	// Real-time searching if activate
+	if (config.useRealTimeSearch) {
+	  const debouncedSearch = debounce(performSearch, config.debounceDelay);
+	  searchInput.addEventListener('input', debouncedSearch);
+	  ingredientInput.addEventListener('input', debouncedSearch);
+	  categorySelect.addEventListener('change', performSearch);
+	  vegetarianCheck.addEventListener('change', performSearch);
+	  durationInput.addEventListener('input', debouncedSearch);
+	}
+	
+	// Initialize display with all recipes
+	generateRecipeCards(recipes, resultsContainerId, config.detailsBaseUrl);
+}
