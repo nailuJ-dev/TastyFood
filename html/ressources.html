@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
@@ -33,11 +34,11 @@
         </section>
         <section class="ressources-partners">
             <h2>Nos partenaires</h2>
-            <div class="ressources-partners-logos">
-                <img src="../ressources/logo-tastyfood.png" alt="logo de tasty food"/>
-                <img src="../ressources/logo-tastyfood.png" alt="logo de tasty food"/>
-                <img src="../ressources/logo-tastyfood.png" alt="logo de tasty food"/>
-                <img src="../ressources/logo-tastyfood.png" alt="logo de tasty food"/>
+            <div class="ressources-partners-logos slider">
+                <div><img src="../ressources/logo-tastyfood.png" alt="logo de tasty food"/></div>
+                <div><img src="../ressources/logo-tastyfood.png" alt="logo de tasty food"/></div>
+                <div><img src="../ressources/logo-tastyfood.png" alt="logo de tasty food"/></div>
+                <div><img src="../ressources/logo-tastyfood.png" alt="logo de tasty food"/></div>
             </div>
         </section>
 	</main>
@@ -53,6 +54,15 @@
 		</div>
 		</div>
 	</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".slider").bxSlider({
+
+            });
+        });
+    </script>
 </body>
 
 </html>
