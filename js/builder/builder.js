@@ -34,26 +34,23 @@ function generateRecipeCards(recipes, containerId, detailsBaseUrl = '/recette/')
 	  card.innerHTML = `
 		<div class="recipe-image-container">
 		  <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image">
-		  ${recipe.vegetarian ? `
-			<div class="vegetarian-badge" title="Recette végétarienne">
-			  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="#4CAF50">
-				<path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M12,20c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z M15,6h-3v10h-2V6H7v2 h2v8h6v-8h2V6z"/>
-			  </svg>
-			</div>
-		  ` : ''}
 		</div>
 		<div class="recipe-content">
-		  <span class="category-tag category-${recipe.category}">${recipe.category}</span>
+          <div class="recipe-tags">
+            <p class="category-tag category-${recipe.category}">${recipe.category}</p>
+            ${recipe.vegetarian ? `
+                <p>Veggie <i class="fa-solid fa-seedling fa-lg veggie-icon" style="color: #13c328;"></i></p>
+              ` : ''}
+		  </div>
 		  <h3 class="recipe-title">${recipe.title}</h3>
 		  <p class="recipe-description">${recipe.description}</p>
-		  <div class="recipe-duration">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#666">
-			  <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
-			  <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-			</svg>
-			<span>${formatDuration(recipe.duration)}</span>
-		  </div>
-		  <a href="${detailsBaseUrl}${recipe.id}" class="view-recipe-btn" data-recipe-id="${recipe.id}">Voir la recette</a>
+          <div class="recipe-bottom-container">
+            <div class="recipe-duration">
+			    <i class="fa-regular fa-clock fa-lg" style="color: #a36d3e;"></i>
+			    <span>${formatDuration(recipe.duration)}</span>
+		    </div>
+		    <a href="${detailsBaseUrl}${recipe.id}" class="view-recipe-btn" data-recipe-id="${recipe.id}">Voir la recette</a>
+          </div>
 		</div>
 	  `;
 	  
@@ -112,10 +109,7 @@ function createRecipeSearchBar(containerId, recipes, resultsContainerId, options
 		<div class="search-input-group">
 		  <input type="text" id="recipe-search-input" class="recipe-search-input" placeholder="Rechercher une recette...">
 		  <button type="submit" class="recipe-search-button">
-			<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-			  <circle cx="11" cy="11" r="8"></circle>
-			  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-			</svg>
+			<i class="fa-solid fa-magnifying-glass fa-lg" style="color: #a36d3e;"></i>
 		  </button>
 		</div>
 		
@@ -139,12 +133,12 @@ function createRecipeSearchBar(containerId, recipes, resultsContainerId, options
 			
 			<div class="filter-group checkbox-group">
 			  <input type="checkbox" id="vegetarian-filter" class="filter-checkbox">
-			  <label for="vegetarian-filter">Recettes végétariennes uniquement</label>
+			  <label for="vegetarian-filter">Recettes végétariennes</label>
 			</div>
 			
 			<div class="filter-group">
 			  <label for="duration-filter">Durée maximale (min):</label>
-			  <input type="number" id="duration-filter" class="filter-input" min="5" max="180" placeholder="ex: 30">
+			  <input id="duration-filter" class="filter-input" min="5" max="180" placeholder="ex: 30">
 			</div>
 			
 			<button type="button" class="reset-filters-btn">Réinitialiser les filtres</button>
