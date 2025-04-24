@@ -1,5 +1,6 @@
+var test = "je teste la portee"
 // Database for the recipes compilation
-const recipesDB = [
+export const recipesDB = [
   {
     id: 1,
     title: "Ratatouille provençale",
@@ -7,7 +8,7 @@ const recipesDB = [
     duration: 45, // in minutes
     category: "plat",
     vegetarian: true,
-    image: "https://example.com/images/ratatouille.jpg",
+    image: "../../ressources/recipes/ratatouille.jpg",
     ingredients: [
       { name: "aubergine", quantity: "2", unit: "pièces" },
       { name: "courgette", quantity: "2", unit: "pièces" },
@@ -34,7 +35,7 @@ const recipesDB = [
     duration: 60,
     category: "dessert",
     vegetarian: true,
-    image: "https://example.com/images/tarte-fraises.jpg",
+    image: "../../ressources/recipes/tarte-fraises.jpg",
     ingredients: [
       { name: "fraise", quantity: "500", unit: "g" },
       { name: "pâte brisée", quantity: "1", unit: "rouleau" },
@@ -60,7 +61,7 @@ const recipesDB = [
     duration: 180,
     category: "plat",
     vegetarian: false,
-    image: "https://example.com/images/boeuf-bourguignon.jpg",
+    image: "../../ressources/recipes/boeuf-bourguignon.jpg",
     ingredients: [
       { name: "bœuf", quantity: "1", unit: "kg" },
       { name: "vin rouge", quantity: "75", unit: "cl" },
@@ -86,7 +87,7 @@ const recipesDB = [
     duration: 20,
     category: "entrée",
     vegetarian: false,
-    image: "https://example.com/images/salade-nicoise.jpg",
+    image: "../../ressources/recipes/salade-nicoise.jpg",
     ingredients: [
       { name: "laitue", quantity: "1", unit: "pièce" },
       { name: "tomate", quantity: "4", unit: "pièces" },
@@ -113,7 +114,7 @@ const recipesDB = [
     duration: 5,
     category: "boisson",
     vegetarian: true,
-    image: "https://example.com/images/mojito.jpg",
+    image: "../../ressources/recipes/mojito.jpg",
     ingredients: [
       { name: "rhum", quantity: "5", unit: "cl" },
       { name: "menthe", quantity: "10", unit: "feuilles" },
@@ -137,7 +138,7 @@ const recipesDB = [
     duration: 75,
     category: "plat",
     vegetarian: true,
-    image: "https://example.com/images/gratin-dauphinois.jpg",
+    image: "../../ressources/recipes/gratin-dauphinois.jpg",
     ingredients: [
       { name: "pomme de terre", quantity: "1", unit: "kg" },
       { name: "crème fraîche", quantity: "40", unit: "cl" },
@@ -163,7 +164,7 @@ const recipesDB = [
     duration: 15,
     category: "dessert",
     vegetarian: true,
-    image: "https://example.com/images/mousse-chocolat.jpg",
+    image: "../../ressources/recipes/mousse-chocolat.jpg",
     ingredients: [
       { name: "chocolat noir", quantity: "200", unit: "g" },
       { name: "œuf", quantity: "6", unit: "pièces" },
@@ -186,7 +187,7 @@ const recipesDB = [
     duration: 60,
     category: "plat",
     vegetarian: true,
-    image: "https://example.com/images/couscous-legumes.jpg",
+    image: "../../ressources/recipes/couscous-legumes.jpg",
     ingredients: [
       { name: "semoule", quantity: "300", unit: "g" },
       { name: "pois chiche", quantity: "250", unit: "g" },
@@ -215,7 +216,7 @@ const recipesDB = [
     duration: 45,
     category: "entrée",
     vegetarian: false,
-    image: "https://example.com/images/quiche-lorraine.jpg",
+    image: "../../ressources/recipes/quiche-lorraine.jpg",
     ingredients: [
       { name: "pâte brisée", quantity: "1", unit: "rouleau" },
       { name: "lardons", quantity: "200", unit: "g" },
@@ -241,7 +242,7 @@ const recipesDB = [
     duration: 5,
     category: "boisson",
     vegetarian: true,
-    image: "https://example.com/images/pina-colada.jpg",
+    image: "../../ressources/recipes/pina-colada.jpg",
     ingredients: [
       { name: "rhum blanc", quantity: "5", unit: "cl" },
       { name: "jus d'ananas", quantity: "10", unit: "cl" },
@@ -264,7 +265,7 @@ const recipesDB = [
     duration: 30,
     category: "plat",
     vegetarian: true,
-    image: "https://example.com/images/risotto-champignons.jpg",
+    image: "../../ressources/recipes/risotto-champignons.jpg",
     ingredients: [
       { name: "riz arborio", quantity: "300", unit: "g" },
       { name: "champignon", quantity: "400", unit: "g" },
@@ -293,7 +294,7 @@ const recipesDB = [
     duration: 30,
     category: "dessert",
     vegetarian: true,
-    image: "https://example.com/images/tiramisu.jpg",
+    image: "../../ressources/recipes/tiramisu.jpg",
     ingredients: [
       { name: "mascarpone", quantity: "250", unit: "g" },
       { name: "œuf", quantity: "3", unit: "pièces" },
@@ -319,7 +320,7 @@ const recipesDB = [
     duration: 60,
     category: "plat",
     vegetarian: false,
-    image: "https://example.com/images/poulet-basquaise.jpg",
+    image: "../../ressources/recipes/poulet-basquaise.jpg",
     ingredients: [
       { name: "poulet", quantity: "1", unit: "pièce" },
       { name: "poivron", quantity: "3", unit: "pièces" },
@@ -346,7 +347,7 @@ const recipesDB = [
     duration: 45,
     category: "entrée",
     vegetarian: true,
-    image: "https://example.com/images/soupe-oignon.jpg",
+    image: "../../ressources/recipes/soupe-oignon.jpg",
     ingredients: [
       { name: "oignon", quantity: "1", unit: "kg" },
       { name: "beurre", quantity: "50", unit: "g" },
@@ -373,7 +374,7 @@ const recipesDB = [
     duration: 15,
     category: "boisson",
     vegetarian: true,
-    image: "https://example.com/images/sangria.jpg",
+    image: "../../ressources/recipes/sangria.jpg",
     ingredients: [
       { name: "vin rouge", quantity: "75", unit: "cl" },
       { name: "orange", quantity: "2", unit: "pièces" },
@@ -399,7 +400,7 @@ const recipesDB = [
     duration: 90,
     category: "plat",
     vegetarian: false,
-    image: "https://example.com/images/lasagnes.jpg",
+    image: "../../ressources/recipes/lasagnes.jpg",
     ingredients: [
       { name: "pâtes à lasagne", quantity: "12", unit: "plaques" },
       { name: "bœuf haché", quantity: "500", unit: "g" },
@@ -430,7 +431,7 @@ const recipesDB = [
     duration: 40,
     category: "dessert",
     vegetarian: true,
-    image: "https://example.com/images/creme-brulee.jpg",
+    image: "../../ressources/recipes/creme-brulee.jpg",
     ingredients: [
       { name: "jaune d'œuf", quantity: "6", unit: "pièces" },
       { name: "crème fraîche", quantity: "50", unit: "cl" },
@@ -454,7 +455,7 @@ const recipesDB = [
     duration: 30,
     category: "plat",
     vegetarian: false,
-    image: "https://example.com/images/pad-thai.jpg",
+    image: "../../ressources/recipes/pad-thai.jpg",
     ingredients: [
       { name: "nouilles de riz", quantity: "200", unit: "g" },
       { name: "crevette", quantity: "300", unit: "g" },
@@ -486,7 +487,7 @@ const recipesDB = [
     duration: 20,
     category: "entrée",
     vegetarian: true,
-    image: "https://example.com/images/gaspacho.jpg",
+    image: "../../ressources/recipes/gaspacho.jpg",
     ingredients: [
       { name: "tomate", quantity: "1", unit: "kg" },
       { name: "concombre", quantity: "1", unit: "pièce" },
@@ -513,7 +514,7 @@ const recipesDB = [
     duration: 5,
     category: "boisson",
     vegetarian: true,
-    image: "https://example.com/images/margarita.jpg",
+    image: "../../ressources/recipes/margarita.jpg",
     ingredients: [
       { name: "tequila", quantity: "5", unit: "cl" },
       { name: "triple sec", quantity: "3", unit: "cl" },
@@ -537,7 +538,7 @@ const recipesDB = [
     duration: 120,
     category: "plat",
     vegetarian: false,
-    image: "https://example.com/images/tajine-agneau.jpg",
+    image: "../../ressources/recipes/tajine-agneau.jpg",
     ingredients: [
       { name: "épaule d'agneau", quantity: "1", unit: "kg" },
       { name: "oignon", quantity: "2", unit: "pièces" },
@@ -567,7 +568,7 @@ const recipesDB = [
     duration: 60,
     category: "dessert",
     vegetarian: true,
-    image: "https://example.com/images/tarte-tatin.jpg",
+    image: "../../ressources/recipes/tarte-tatin.jpg",
     ingredients: [
       { name: "pomme", quantity: "8", unit: "pièces" },
       { name: "pâte feuilletée", quantity: "1", unit: "rouleau" },
@@ -591,7 +592,7 @@ const recipesDB = [
     duration: 75,
     category: "plat",
     vegetarian: false,
-    image: "https://example.com/images/paella.jpg",
+    image: "../../ressources/recipes/paella.jpg",
     ingredients: [
       { name: "riz", quantity: "400", unit: "g" },
       { name: "poulet", quantity: "400", unit: "g" },
@@ -622,7 +623,7 @@ const recipesDB = [
     duration: 35,
     category: "entrée",
     vegetarian: true,
-    image: "https://example.com/images/veloute-potimarron.jpg",
+    image: "../../ressources/recipes/veloute-potimarron.jpg",
     ingredients: [
       { name: "potimarron", quantity: "1", unit: "pièce" },
       { name: "pomme de terre", quantity: "2", unit: "pièces" },
@@ -647,7 +648,7 @@ const recipesDB = [
     duration: 5,
     category: "boisson",
     vegetarian: true,
-    image: "https://example.com/images/aperol-spritz.jpg",
+    image: "../../ressources/recipes/aperol-spritz.jpg",
     ingredients: [
       { name: "Aperol", quantity: "6", unit: "cl" },
       { name: "Prosecco", quantity: "9", unit: "cl" },
@@ -671,7 +672,7 @@ const recipesDB = [
     duration: 40,
     category: "plat",
     vegetarian: true,
-    image: "https://example.com/images/curry-legumes.jpg",
+    image: "../../ressources/recipes/curry-legumes.jpg",
     ingredients: [
       { name: "patate douce", quantity: "2", unit: "pièces" },
       { name: "chou-fleur", quantity: "1", unit: "pièce" },
@@ -702,7 +703,7 @@ const recipesDB = [
     duration: 70,
     category: "dessert",
     vegetarian: true,
-    image: "https://example.com/images/profiteroles.jpg",
+    image: "../../ressources/recipes/profiteroles.jpg",
     ingredients: [
       { name: "farine", quantity: "150", unit: "g" },
       { name: "beurre", quantity: "75", unit: "g" },
@@ -729,7 +730,7 @@ const recipesDB = [
     duration: 60,
     category: "plat",
     vegetarian: false,
-    image: "https://example.com/images/chili-con-carne.jpg",
+    image: "../../ressources/recipes/chili-con-carne.jpg",
     ingredients: [
       { name: "bœuf haché", quantity: "500", unit: "g" },
       { name: "haricot rouge", quantity: "400", unit: "g" },
@@ -758,7 +759,7 @@ const recipesDB = [
     duration: 20,
     category: "entrée",
     vegetarian: false,
-    image: "https://example.com/images/tartare-saumon.jpg",
+    image: "../../ressources/recipes/tartare-saumon.jpg",
     ingredients: [
       { name: "saumon frais", quantity: "400", unit: "g" },
       { name: "avocat", quantity: "2", unit: "pièces" },
@@ -785,7 +786,7 @@ const recipesDB = [
     duration: 5,
     category: "boisson",
     vegetarian: true,
-    image: "https://example.com/images/virgin-mojito.jpg",
+    image: "../../ressources/recipes/virgin-mojito.jpg",
     ingredients: [
       { name: "menthe", quantity: "15", unit: "feuilles" },
       { name: "citron vert", quantity: "2", unit: "pièces" },
@@ -803,3 +804,4 @@ const recipesDB = [
     ]
   }
 ];
+

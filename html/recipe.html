@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recette</title>
+    <meta name="description" content="The best recipes for please yourself">
+    <title>TastyFood | The place to be if you are a recipe</title>
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-    <p>test pour github</p>
+    <header class="home-header">
+	    <img src="../ressources/logo-tastyfood.png" alt="logo de tasty food"/>
+    	<nav>
+    	    <ul>
+    	       <li><a  class="home-bouton" href="homepage.html">Accueil</a></li> 
+    	        <li> <a class="home-bouton" href="recipe.html">Nos recettes</a></li>
+    	        <li> <a class="home-bouton" href="#">Contact</a></li>
+    	        <li><a class="home-bouton" href="ressources.html">Ressources</a></li> 
+    	    
+			</ul>
+		</nav>
+		
+	</header>
+    <header id="header.page">
+        <h2 id="recipe.title"></h2>
+        <p>Pour 4 personnes</p>
+    </header>
+    <main>
+        <img id="recipe.img" src="../ressources/recipes/" alt="image de la recette"/>
+        <section class="recipe.steps">
+            <h3>Préparation</h3>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section class="ingredients">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        
+
+
+    </main>
+    
+
+    <footer class="home-footer">
+		<div class="footer-flex">
+		<p>© Tasty Food</p>
+		<div class="reseaux-sociaux">
+			<a href="https://www.facebook.fr"><i class="fa-brands fa-facebook-f fa-2xl" style="color: #a36d3f;"></i></a>
+			<a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2xl" style="color: #a36d3f;"></i></a>
+			<a href="https://fr.pinterest.com/"><i class="fa-brands fa-pinterest-p fa-2xl" style="color: #a36d3f;"></i></a>
+		</div>
+		</div>
+	</footer>
 </body>
+
+    <script type="text/javascript" src="../js/datas/recipesDatas.js" defer></script>
+    <script type="module" src="../js/builder/recipeBuilder.js" defer></script>
 </html>
