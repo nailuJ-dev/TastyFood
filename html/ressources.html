@@ -30,7 +30,8 @@
 	<main class="home-container">
         <h1>Les ressources partagées par TastyFood</h1>
 	    <section class="ressources-recipes-tutorials">
-            <h2>Profitez de nos tutoriaux présentés comme nos recettes... avec amour bien évidemment !</h2>
+            <h2>Profitez de nos tutoriaux présentés comme nos recettes...</br>
+                Avec amour bien évidemment !</h2>
         </section>
         <section class="ressources-partners">
             <h2>Nos partenaires</h2>
@@ -59,7 +60,9 @@
     <script>
         $(document).ready(function(){
             $(".slider").bxSlider({
-
+                infiniteLoop: true,
+                hideControlOnEnd: true,
+                slideWidth: 600,    
             });
         });
     </script>
