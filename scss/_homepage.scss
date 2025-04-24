@@ -54,11 +54,12 @@ h3{
     background-color: $color-brown;
     text-align:center;
     margin-bottom:1em;
+    width:100%;
     
 }
 
 .home-header img {
-    width:12em;
+    width:11em;
 }
 
 ul{
@@ -88,11 +89,25 @@ ul{
     
 }
 
+
+.mb-3{
+    display:none;
+}
+
+
+.navbar-toggler-icon {
+  width: 2.5rem;  
+  height: 2.5rem; 
+  background-size: 2.5rem 2.5rem;
+}
+
 /* ..............MAIN...............*/
 
 .home-container{
-    width: 1300px;
+    width: 90%;
+    max-width: 1300px;
     margin: 0 auto;
+    padding: 0 1em; 
     
 }
 
@@ -118,8 +133,108 @@ ul{
 
 .home-bouton-recipes{
     color:$color-brown;
+    transition: transform;
     
 }
+
+.home-bouton-recipes:hover{
+     transform: scale(0.6);
+}
+
+
+/* ..............FORM...............*/
+
+fieldset {
+    margin: 2em 0;
+    font-size: 1.6rem;
+    border: 1px solid $color-brown;
+    border-radius: 0.5em;
+}
+
+legend {
+    padding: 0 1em;
+    font-size: 1.8rem;
+}
+
+.field {
+    display: flex;
+    padding: 1em;
+}
+
+.field label {
+    width: 30%;
+    padding: 0.5em;
+}
+
+.field input {
+    width: 70%;
+}
+
+
+
+input,
+select,
+textarea {
+    border: 1px solid $color-brown;
+    border-radius: 0.5em;
+    font-size: 1.6rem;
+    padding: 0.5em 1em;
+    color: #333;
+}
+
+select, textarea
+ {
+    width: 100%;
+}
+
+textarea {
+    margin:0 1em;
+    min-height: 10em;
+}
+
+.toolbar {
+    padding: 1em 2em;
+    text-align: center;
+    border: 1px solid $color-brown;
+    border-radius: 0.5em;
+}
+
+
+.toolbar-submit{
+    padding: 1em 2em;
+    text-align: center;
+   
+}
+
+.button-submit {
+    padding: 0.5em 2em;
+    font-size: 1.6rem;
+    color: $color-brown;
+    background-color: white;
+    border: 2px solid $color-brown;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+    
+.button-submit:hover {
+    color: white;
+    background-color: $color-brown;
+}
+
+
+
+::placeholder{
+    color: $color-brown;
+}
+
+
+
+select {
+    color:$color-brown ;
+}
+
+
+
 
 
 /* ..............FOOTER...............*/
@@ -146,4 +261,63 @@ ul{
 
 .reseaux-sociaux i{
     padding:1em;
+}
+
+
+
+
+
+
+
+/* ..............VERSION TABLETTE...............*/
+
+
+@media screen and (max-width: 1200px) {
+    
+    .home-container{
+    width: 95%;
+    padding: 0 2em;
+ 
+
+    }
+  
+    .mb-3{
+        display:block;
+    }
+    
+    
+    .version-grand-ecran{
+        display:none;
+    }
+    
+    .footer-flex {
+        justify-content:center;
+        flex-direction: column;
+        
+    }
+    
+    
+    .reseaux-sociaux{
+        height:auto;
+    }
+}
+
+
+
+
+
+/* ..............VERSION MOBILE...............*/
+
+
+@media screen and (max-width: 780px) {
+         .home-container {
+            width: 100%;
+            margin:0;
+      }
+      
+      
+     
+   
+  
+
 }
