@@ -98,7 +98,7 @@ function createRecipeSearchBar(containerId, recipes, resultsContainerId, options
 	
 	// Default settings
 	const config = {
-	  detailsBaseUrl: '/recette/',
+	  detailsBaseUrl: 'recipe.html?id=',
 	  useRealTimeSearch: true,
 	  debounceDelay: 300,
 	  ...options
