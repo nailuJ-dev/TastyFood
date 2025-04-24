@@ -158,8 +158,11 @@ legend {
 
 .field {
     display: flex;
+    flex-direction: column;
     padding: 1em;
 }
+   
+
 
 .field label {
     width: 30%;
@@ -182,15 +185,21 @@ textarea {
     color: #333;
 }
 
-select, textarea
+select 
  {
     width: 100%;
 }
 
+
 textarea {
-    margin:0 1em;
-    min-height: 10em;
+    width: auto;
+    margin: 0 1em;
+    height: 10em;
+
 }
+
+
+
 
 .toolbar {
     padding: 1em 2em;
@@ -242,7 +251,7 @@ select {
 
 .home-footer{
     background-color: $color-beige;
-    height:5em;
+   
     margin-top:5em;
 }
 
@@ -276,7 +285,7 @@ select {
     
     .home-container{
     width: 95%;
-    padding: 0 2em;
+    
  
 
     }
@@ -289,6 +298,20 @@ select {
     .version-grand-ecran{
         display:none;
     }
+    
+     .home-article {
+          margin:0;
+      }
+      
+    
+    h1{
+        padding:1em 0;
+    }
+    
+    h3{
+        padding:1em 0;
+    }
+    
     
     .footer-flex {
         justify-content:center;
@@ -315,7 +338,7 @@ select {
             margin:0;
       }
       
-      
+     
      
    
   

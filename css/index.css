@@ -95,7 +95,7 @@ ul {
 }
 
 .home-container .home-article {
-  border: 1px solid #a36d3e;
+  border: 1px solid rgb(163, 109, 62);
   padding: 1em;
   margin: 2em;
 }
@@ -128,6 +128,7 @@ legend {
 
 .field {
   display: flex;
+  flex-direction: column;
   padding: 1em;
 }
 
@@ -150,13 +151,14 @@ textarea {
   color: #333;
 }
 
-select, textarea {
+select {
   width: 100%;
 }
 
 textarea {
+  width: auto;
   margin: 0 1em;
-  min-height: 10em;
+  height: 10em;
 }
 
 .toolbar {
@@ -197,7 +199,6 @@ select {
 /* ..............FOOTER...............*/
 .home-footer {
   background-color: #EED7C4;
-  height: 5em;
   margin-top: 5em;
 }
 
@@ -215,18 +216,25 @@ select {
   padding: 1em;
 }
 
-<<<<<<< HEAD
 /* ..............VERSION TABLETTE...............*/
 @media screen and (max-width: 1200px) {
   .home-container {
     width: 95%;
-    padding: 0 2em;
   }
   .mb-3 {
     display: block;
   }
   .version-grand-ecran {
     display: none;
+  }
+  .home-article {
+    margin: 0;
+  }
+  h1 {
+    padding: 1em 0;
+  }
+  h3 {
+    padding: 1em 0;
   }
   .footer-flex {
     justify-content: center;
@@ -241,7 +249,8 @@ select {
   .home-container {
     width: 100%;
     margin: 0;
-=======
+  }
+}
 .recipe-index-main {
   line-height: 1.25;
   text-align: center;
@@ -366,11 +375,9 @@ select {
   .recipes-main-generated-area {
     grid-template-columns: 1fr 1fr;
   }
-
   .recipe-image-container {
     height: 15rem;
   }
-
   .recipe-bottom-container a {
     margin-top: 1rem;
   }
@@ -379,14 +386,11 @@ select {
   .recipes-main-generated-area {
     grid-template-columns: 1fr;
   }
-
   .recipe-image-container {
     height: 15rem;
   }
-
   .recipe-bottom-container a {
     margin-top: 1rem;
->>>>>>> a1468be25991e32af8597c2578a4058f10037aff
   }
 }
 
