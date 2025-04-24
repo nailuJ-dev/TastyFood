@@ -39,7 +39,7 @@ function generateRecipeCards(recipes, containerId, detailsBaseUrl = '/recette/')
           <div class="recipe-tags">
             <p class="category-tag category-${recipe.category}">${recipe.category}</p>
             ${recipe.vegetarian ? `
-                <i class="fa-solid fa-seedling fa-lg veggie-icon" style="color: #13c328;"></i>
+                <p>Veggie <i class="fa-solid fa-seedling fa-lg veggie-icon" style="color: #13c328;"></i></p>
               ` : ''}
 		  </div>
 		  <h3 class="recipe-title">${recipe.title}</h3>
@@ -133,12 +133,12 @@ function createRecipeSearchBar(containerId, recipes, resultsContainerId, options
 			
 			<div class="filter-group checkbox-group">
 			  <input type="checkbox" id="vegetarian-filter" class="filter-checkbox">
-			  <label for="vegetarian-filter">Recettes végétariennes uniquement</label>
+			  <label for="vegetarian-filter">Recettes végétariennes</label>
 			</div>
 			
 			<div class="filter-group">
 			  <label for="duration-filter">Durée maximale (min):</label>
-			  <input type="number" id="duration-filter" class="filter-input" min="5" max="180" placeholder="ex: 30">
+			  <input id="duration-filter" class="filter-input" min="5" max="180" placeholder="ex: 30">
 			</div>
 			
 			<button type="button" class="reset-filters-btn">Réinitialiser les filtres</button>
