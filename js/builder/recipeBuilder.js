@@ -8,6 +8,8 @@ import {recipesDB} from "../datas/recipesDatasNew.js";
 function getRecipeIds() {
     return recipesDB.map(recipe => recipe.id);
 }
+
+let idTab= getRecipeIds();
   
 // collect the description according to the id
 function getNameById(id) {
@@ -66,41 +68,19 @@ console.log(getStepsById(2));
 /*                             AFFICHAGE DANS HTML                           */ 
 /*************************************************************************** */
 
-function generateRecipeTitle(recipes, containerId, detailsBaseUrl = '/recette/') {
-	const titleplace = document.getElementById("recipe-header-page");
+function createTitle(idTab){
+    let placeTitle = document.getElementById('recipe-header-page');
 	
-	if (!titleplace) {
-	  console.error(`Place pour générer le titre introuvable`);
+	if (!placeTitle) {
+	  console.error(`Contaneur de titre introuvable`);
 	  return;
 	}
-	
-	// cleaning existing container
-	titleplace.innerHTML = '';
-	
-	// Display a message if no recipe is found
-	if (recipes.length === 0) {
-	  titleplace.innerHTML = '<div class="no-results">Aucun titre trouvé pour cette recette.</div>';
-	  return;
-	}
-	
-	// Use fragment to increase performance
-	const fragment = document.createDocumentFragment();
-	
-	// Generate recipe title
-	recipes.forEach(recipe => {
-	  // Create title
-	  const title = document.createElement('h2');
-	  title.className = 'recipe-title';
-	  
-	  // Card template
-	  title.innerHTML = `
-		<h2 id="recipe.title">"${recipe.title}"</h2>`;
-	  
-	  // Add card to fragment
-	  fragment.appendChild(title);
-	});
-	
-	// Add fragment to container
-	titleplace.appendChild(fragment);
+    console.log(idTab),
+    console.log("je suis dans la fonction")
+    placeTitle.innerHTML=
+    `
+    <h2 class="title-header">${idTab[id].name}</h2>
+    `
 }
 
+createTitle(idTab[id])
