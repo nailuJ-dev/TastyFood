@@ -1,5 +1,6 @@
+var test = "je teste la portee"
 // Database for the recipes compilation
-const recipesDB = [
+export const recipesDB = [
   {
     id: 1,
     title: "Ratatouille provençale",
@@ -803,3 +804,4 @@ const recipesDB = [
     ]
   }
 ];
+
