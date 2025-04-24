@@ -10,6 +10,12 @@ function getRecipeIds() {
 }
   
 // collect the description according to the id
+function getNameById(id) {
+    const recipe = recipesDB.find(recipe => recipe.id === id);
+    return recipe ? recipe.name : null;
+}
+
+// collect the description according to the id
 function getDescriptionById(id) {
     const recipe = recipesDB.find(recipe => recipe.id === id);
     return recipe ? recipe.description : null;
@@ -60,5 +66,41 @@ console.log(getStepsById(2));
 /*                             AFFICHAGE DANS HTML                           */ 
 /*************************************************************************** */
 
-
+function generateRecipeTitle(recipes, containerId, detailsBaseUrl = '/recette/') {
+	const titleplace = document.getElementById("recipe-header-page");
+	
+	if (!titleplace) {
+	  console.error(`Place pour générer le titre introuvable`);
+	  return;
+	}
+	
+	// cleaning existing container
+	titleplace.innerHTML = '';
+	
+	// Display a message if no recipe is found
+	if (recipes.length === 0) {
+	  titleplace.innerHTML = '<div class="no-results">Aucun titre trouvé pour cette recette.</div>';
+	  return;
+	}
+	
+	// Use fragment to increase performance
+	const fragment = document.createDocumentFragment();
+	
+	// Generate recipe title
+	recipes.forEach(recipe => {
+	  // Create title
+	  const title = document.createElement('h2');
+	  title.className = 'recipe-title';
+	  
+	  // Card template
+	  title.innerHTML = `
+		<h2 id="recipe.title">"${recipe.title}"</h2>`;
+	  
+	  // Add card to fragment
+	  fragment.appendChild(title);
+	});
+	
+	// Add fragment to container
+	titleplace.appendChild(fragment);
+}
 
