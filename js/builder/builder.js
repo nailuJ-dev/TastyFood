@@ -4,6 +4,7 @@
  * @param {string} containerId - Container id to include cards
  * @param {string} detailsBaseUrl - url basis for recipe details pages
  */
+
 function generateRecipeCards(recipes, containerId, detailsBaseUrl = 'recipe.html?id=') {
 	const container = document.getElementById('recipes-main-generated-area');
 	
