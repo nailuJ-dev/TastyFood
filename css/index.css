@@ -1,0 +1,119 @@
+/* ..............GENERALITES...............*/
+body * {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+  color: #A36D3E;
+  background-color: white;
+  line-height: 1.6em;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Boldonse", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 1em;
+}
+
+h2 {
+  font-family: "Boldonse", sans-serif;
+  font-size: 2rem;
+}
+
+h3 {
+  font-family: "Boldonse", sans-serif;
+  font-size: 1.5rem;
+  padding-bottom: 0.5em;
+}
+
+/* ..............HEADER...............*/
+.home-header {
+  background-color: #A36D3E;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.home-header img {
+  width: 12em;
+}
+
+ul {
+  list-style: none;
+}
+
+.home-bouton {
+  text-decoration: none;
+  color: #EED7C4;
+  font-size: 1.7rem;
+}
+
+.home-header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.home-header nav {
+  padding: 1em;
+}
+
+.home-bouton:hover {
+  color: #A36D3E;
+  background-color: white;
+  padding: 0.5em;
+}
+
+/* ..............MAIN...............*/
+.home-container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.home-container img {
+  width: 70%;
+  padding-bottom: 1em;
+}
+
+.home-container .home-article {
+  border: 1px solid rgb(163, 109, 62);
+  padding: 1em;
+  margin: 2em;
+}
+
+.image-filles {
+  text-align: center;
+}
+
+.home-bouton-recipes {
+  color: #A36D3E;
+}
+
+/* ..............FOOTER...............*/
+.home-footer {
+  background-color: #EED7C4;
+  height: 5em;
+  margin-top: 5em;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-flex p {
+  font-weight: bold;
+}
+
+.reseaux-sociaux i {
+  padding: 1em;
+}
+
+/*# sourceMappingURL=index.css.map */

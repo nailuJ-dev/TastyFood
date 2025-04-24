@@ -1,0 +1,149 @@
+/* ..............GENERALITES...............*/
+body * {
+  box-sizing: border-box;
+}
+
+
+html {
+  font-size: 62.5%;
+}
+
+
+body{
+    font-family:$font-family;
+    font-size:$font-size-p;
+    color: $color-brown;
+    background-color:white;
+    line-height: 1.6em;
+    margin: 0;
+}
+
+
+h1{
+    font-family:$font-family-title;
+    font-size:$font-size-h1;
+    text-align:center;
+    padding:1em;
+}
+
+
+h2{
+    font-family:$font-family-title;
+    font-size:$font-size-h2;
+    
+}
+
+
+h3{
+    font-family:$font-family-title;
+    font-size:$font-size-h3;
+    padding-bottom: 0.5em;
+}
+
+
+
+
+
+
+
+
+/* ..............HEADER...............*/
+
+
+.home-header {
+    background-color: $color-brown;
+    text-align:center;
+    margin-bottom:1em;
+    
+}
+
+.home-header img {
+    width:12em;
+}
+
+ul{
+    list-style:none
+}
+.home-bouton{
+    text-decoration:none;
+    color:$color-beige;
+    font-size: 1.7rem;
+}
+
+.home-header nav ul{
+    display : flex;
+    justify-content:space-around;
+}
+
+
+.home-header nav{
+    padding:1em;
+}
+
+
+.home-bouton:hover{
+    color:$color-brown;
+    background-color:white;
+    padding:0.5em;
+    
+}
+
+/* ..............MAIN...............*/
+
+.home-container{
+    width: 1000px;
+    margin: 0 auto;
+    
+}
+
+.home-container img {
+    width:70%;
+    padding-bottom:1em;
+    
+}
+
+
+
+.home-container .home-article{
+    border:1px solid rgba(163, 109, 62, 1);
+    padding:1em;
+    margin:2em;
+}
+
+
+.image-filles{
+    text-align:center;
+}
+
+
+.home-bouton-recipes{
+    color:$color-brown;
+    
+}
+
+
+/* ..............FOOTER...............*/
+
+
+.home-footer{
+    background-color: $color-beige;
+    height:5em;
+    margin-top:5em;
+}
+
+
+
+.footer-flex{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+
+.footer-flex p{
+    font-weight:bold;
+}
+
+.reseaux-sociaux i{
+    padding:1em;
+}
