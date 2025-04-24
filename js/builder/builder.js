@@ -5,10 +5,10 @@
  * @param {string} detailsBaseUrl - url basis for recipe details pages
  */
 function generateRecipeCards(recipes, containerId, detailsBaseUrl = '/recette/') {
-	const container = document.getElementById(containerId);
+	const container = document.getElementById('recipes-main-generated-area');
 	
 	if (!container) {
-	  console.error(`Conteneur "${containerId}" introuvable`);
+	  console.error(`Conteneur pour générer les recettes introuvable`);
 	  return;
 	}
 	
@@ -91,10 +91,10 @@ function formatDuration(minutes) {
 * @param {Object} options - More options
 */
 function createRecipeSearchBar(containerId, recipes, resultsContainerId, options = {}) {
-	const container = document.getElementById(containerId);
+	const container = document.getElementById('recipes-main-searchbar');
 	
 	if (!container) {
-	  console.error(`Conteneur "${containerId}" introuvable`);
+	  console.error(`Conteneur barre de recherche introuvable`);
 	  return;
 	}
 	
@@ -265,3 +265,15 @@ function createRecipeSearchBar(containerId, recipes, resultsContainerId, options
 	// Initialize display with all recipes
 	generateRecipeCards(recipes, resultsContainerId, config.detailsBaseUrl);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    let searchContainer = document.getElementsByClassName('.recipes-main-searchbar');
+    let recipesContainer = document.getElementsByClassName('.recipes-main-generated-area');
+
+    // Initialiser la barre de recherche avec la base de données
+    createRecipeSearchBar(searchContainer, recipesDB, recipesContainer, {
+      detailsBaseUrl: '/recettes/',
+      useRealTimeSearch: true,
+      debounceDelay: 300
+    });
+});
