@@ -21,7 +21,7 @@
     	    <ul>
     	       <li><a  class="home-bouton" href="homepage.html">Accueil</a></li> 
     	        <li> <a class="home-bouton" href="recipe.html">Nos recettes</a></li>
-    	        <li> <a class="home-bouton" href="#">Contact</a></li>
+    	        <li> <a class="home-bouton" href="homepage.html#formulaire">Contact</a></li>
     	        <li><a class="home-bouton" href="ressources.html">Ressources</a></li> 
 			</ul>
 		</nav>
@@ -29,12 +29,29 @@
     
 	<main class="home-container">
         <h1>Les ressources partagées par TastyFood</h1>
-	    <section class="ressources-recipes-tutorials">
-            <h2>Profitez de nos tutoriaux présentés comme nos recettes...</br>
-                Avec amour bien évidemment !</h2>
+	    <section class="ressources-recipes-tutorials home-article">
+            <h3>Profitez de nos tutoriaux présentés comme nos recettes...</br>
+                Avec amour bien évidemment !</h3>
+                <iframe 
+                    width="560" height="315" 
+                    src="https://www.youtube.com/embed/UGsvfsrP2fo" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                
+                <iframe
+                    width="560" height="315" 
+                    src="https://www.youtube.com/embed/3ZEqmdjHSVc?si=rsIixmXfBTQw7iI-" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen></iframe>
         </section>
         <section class="ressources-partners">
-            <h2>Nos partenaires</h2>
+            <h3>Nos partenaires</h3>
             <div class="ressources-partners-logos slider">
                 <div><img src="../ressources/logo-tastyfood.png" alt="logo de tasty food"/></div>
                 <div><img src="../ressources/logo-tastyfood.png" alt="logo de tasty food"/></div>
@@ -62,7 +79,9 @@
             $(".slider").bxSlider({
                 infiniteLoop: true,
                 hideControlOnEnd: true,
-                slideWidth: 600,    
+                slideWidth: 300,
+                minSlides: 2,
+                maxSlides: 2,
             });
         });
     </script>
