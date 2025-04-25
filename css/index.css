@@ -396,38 +396,6 @@ select {
     margin-top: 1rem;
   }
 }
-<<<<<<< HEAD
-iframe {
-  width: 40%;
-  margin: 1em;
-}
-
-.video-youtube {
-  display: flex;
-  justify-content: space-around;
-}
-
-.bx-wrapper {
-  margin: auto;
-}
-
-.bx-wrapper img {
-  margin: auto;
-}
-
-@media screen and (max-width: 1200px) {
-  iframe {
-    width: 60%;
-  }
-}
-@media screen and (max-width: 780px) {
-  .video-youtube {
-    justify-content: center;
-    flex-direction: column;
-  }
-  iframe {
-    width: 80%;
-=======
 /* ..............GENERALITES...............*/
 body * {
   box-sizing: border-box;
@@ -531,7 +499,38 @@ body {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
->>>>>>> 43f166b84a14909c7b0c7c18e0a548be18c85041
+  }
+}
+iframe {
+  width: 40%;
+  margin: 1em;
+}
+
+.video-youtube {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bx-wrapper {
+  margin: auto;
+}
+
+.bx-wrapper img {
+  margin: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  iframe {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 780px) {
+  .video-youtube {
+    justify-content: center;
+    flex-direction: column;
+  }
+  iframe {
+    width: 80%;
   }
 }
 
