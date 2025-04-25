@@ -32,7 +32,7 @@ const recipesDB = [
       { name: "fraise", quantity: "500", unit: "g" },
       { name: "pâte brisée", quantity: "1", unit: "rouleau" },
       { name: "lait", quantity: "50", unit: "cl" },
-      { name: "œuf", quantity: "4", unit: "pièces" },
+      { name: "oeuf", quantity: "4", unit: "pièces" },
       { name: "sucre", quantity: "100", unit: "g" },
       { name: "farine", quantity: "40", unit: "g" },
       { name: "vanille", quantity: "1", unit: "gousse" }
@@ -40,14 +40,14 @@ const recipesDB = [
   },
   {
     id: 3,
-    title: "Bœuf Bourguignon",
+    title: "Boeuf Bourguignon",
     description: "Un plat traditionnel français mijoté avec du vin rouge et des légumes.",
     duration: 180,
     category: "plat",
     vegetarian: false,
     image: "../ressources/recipes/boeuf-bourguignon.jpg",
     ingredients: [
-      { name: "bœuf", quantity: "1", unit: "kg" },
+      { name: "boeuf", quantity: "1", unit: "kg" },
       { name: "vin rouge", quantity: "75", unit: "cl" },
       { name: "carotte", quantity: "3", unit: "pièces" },
       { name: "oignon", quantity: "2", unit: "pièces" },
@@ -67,7 +67,7 @@ const recipesDB = [
     ingredients: [
       { name: "laitue", quantity: "1", unit: "pièce" },
       { name: "tomate", quantity: "4", unit: "pièces" },
-      { name: "œuf", quantity: "3", unit: "pièces" },
+      { name: "oeuf", quantity: "3", unit: "pièces" },
       { name: "thon", quantity: "200", unit: "g" },
       { name: "olive", quantity: "100", unit: "g" },
       { name: "haricot vert", quantity: "200", unit: "g" },
@@ -119,7 +119,7 @@ const recipesDB = [
     image: "../ressources/recipes/mousse-chocolat.jpg",
     ingredients: [
       { name: "chocolat noir", quantity: "200", unit: "g" },
-      { name: "œuf", quantity: "6", unit: "pièces" },
+      { name: "oeuf", quantity: "6", unit: "pièces" },
       { name: "sucre", quantity: "50", unit: "g" },
       { name: "beurre", quantity: "30", unit: "g" }
     ]
@@ -156,7 +156,7 @@ const recipesDB = [
     ingredients: [
       { name: "pâte brisée", quantity: "1", unit: "rouleau" },
       { name: "lardons", quantity: "200", unit: "g" },
-      { name: "œuf", quantity: "3", unit: "pièces" },
+      { name: "oeuf", quantity: "3", unit: "pièces" },
       { name: "crème fraîche", quantity: "20", unit: "cl" },
       { name: "lait", quantity: "10", unit: "cl" },
       { name: "muscade", quantity: "1", unit: "pincée" },
@@ -209,7 +209,7 @@ const recipesDB = [
     image: "../ressources/recipes/tiramisu.jpg",
     ingredients: [
       { name: "mascarpone", quantity: "250", unit: "g" },
-      { name: "œuf", quantity: "3", unit: "pièces" },
+      { name: "oeuf", quantity: "3", unit: "pièces" },
       { name: "sucre", quantity: "80", unit: "g" },
       { name: "café", quantity: "15", unit: "cl" },
       { name: "biscuit cuillère", quantity: "24", unit: "pièces" },
@@ -248,7 +248,7 @@ const recipesDB = [
       { name: "oignon", quantity: "1", unit: "kg" },
       { name: "beurre", quantity: "50", unit: "g" },
       { name: "farine", quantity: "2", unit: "cuillères à soupe" },
-      { name: "bouillon de bœuf", quantity: "1.5", unit: "l" },
+      { name: "bouillon de boeuf", quantity: "1.5", unit: "l" },
       { name: "vin blanc", quantity: "10", unit: "cl" },
       { name: "pain", quantity: "6", unit: "tranches" },
       { name: "gruyère", quantity: "150", unit: "g" },
@@ -283,7 +283,7 @@ const recipesDB = [
     image: "../ressources/recipes/lasagnes.jpg",
     ingredients: [
       { name: "pâtes à lasagne", quantity: "12", unit: "plaques" },
-      { name: "bœuf haché", quantity: "500", unit: "g" },
+      { name: "boeuf haché", quantity: "500", unit: "g" },
       { name: "carotte", quantity: "2", unit: "pièces" },
       { name: "céleri", quantity: "1", unit: "branche" },
       { name: "oignon", quantity: "1", unit: "pièce" },
@@ -305,7 +305,7 @@ const recipesDB = [
     vegetarian: true,
     image: "../ressources/recipes/creme-brulee.jpg",
     ingredients: [
-      { name: "jaune d'œuf", quantity: "6", unit: "pièces" },
+      { name: "jaune d'oeuf", quantity: "6", unit: "pièces" },
       { name: "crème fraîche", quantity: "50", unit: "cl" },
       { name: "sucre", quantity: "75", unit: "g" },
       { name: "vanille", quantity: "1", unit: "gousse" },
@@ -323,7 +323,7 @@ const recipesDB = [
     ingredients: [
       { name: "nouilles de riz", quantity: "200", unit: "g" },
       { name: "crevette", quantity: "300", unit: "g" },
-      { name: "œuf", quantity: "2", unit: "pièces" },
+      { name: "oeuf", quantity: "2", unit: "pièces" },
       { name: "tofu", quantity: "100", unit: "g" },
       { name: "pousse de soja", quantity: "100", unit: "g" },
       { name: "carotte", quantity: "1", unit: "pièce" },
@@ -499,7 +499,7 @@ const recipesDB = [
     ingredients: [
       { name: "farine", quantity: "150", unit: "g" },
       { name: "beurre", quantity: "75", unit: "g" },
-      { name: "œuf", quantity: "4", unit: "pièces" },
+      { name: "oeuf", quantity: "4", unit: "pièces" },
       { name: "sucre", quantity: "1", unit: "pincée" },
       { name: "sel", quantity: "1", unit: "pincée" },
       { name: "glace vanille", quantity: "500", unit: "ml" },
@@ -510,13 +510,13 @@ const recipesDB = [
   {
     id: 28,
     title: "Chili con carne",
-    description: "Un plat mexicain épicé à base de bœuf haché, haricots rouges et épices.",
+    description: "Un plat mexicain épicé à base de boeuf haché, haricots rouges et épices.",
     duration: 60,
     category: "plat",
     vegetarian: false,
     image: "../ressources/recipes/chili-carne.jpg",
     ingredients: [
-      { name: "bœuf haché", quantity: "500", unit: "g" },
+      { name: "boeuf haché", quantity: "500", unit: "g" },
       { name: "haricot rouge", quantity: "400", unit: "g" },
       { name: "tomate", quantity: "800", unit: "g" },
       { name: "poivron", quantity: "2", unit: "pièces" },

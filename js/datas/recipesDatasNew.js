@@ -40,7 +40,7 @@ export const recipesDB = [
       { name: "fraise", quantity: "500", unit: "g" },
       { name: "pâte brisée", quantity: "1", unit: "rouleau" },
       { name: "lait", quantity: "50", unit: "cl" },
-      { name: "œuf", quantity: "4", unit: "pièces" },
+      { name: "oeuf", quantity: "4", unit: "pièces" },
       { name: "sucre", quantity: "100", unit: "g" },
       { name: "farine", quantity: "40", unit: "g" },
       { name: "vanille", quantity: "1", unit: "gousse" }
@@ -49,21 +49,21 @@ export const recipesDB = [
       "Préchauffer le four à 180°C et étaler la pâte brisée dans un moule à tarte.",
       "Cuire la pâte à blanc pendant 15 minutes avec des poids de cuisson.",
       "Préparer la crème pâtissière : faire bouillir le lait avec la gousse de vanille fendue.",
-      "Fouetter les œufs avec le sucre, ajouter la farine, puis verser le lait chaud tout en remuant.",
+      "Fouetter les oeufs avec le sucre, ajouter la farine, puis verser le lait chaud tout en remuant.",
       "Remettre le mélange sur le feu et faire épaissir, puis laisser refroidir.",
       "Étaler la crème sur le fond de tarte refroidi, disposer les fraises coupées en deux et servir frais."
     ]
   },
   {
     id: 3,
-    title: "Bœuf Bourguignon",
+    title: "Boeuf Bourguignon",
     description: "Un plat traditionnel français mijoté avec du vin rouge et des légumes.",
     duration: 180,
     category: "plat",
     vegetarian: false,
     image: "../ressources/recipes/boeuf-bourguignon.jpg",
     ingredients: [
-      { name: "bœuf", quantity: "1", unit: "kg" },
+      { name: "boeuf", quantity: "1", unit: "kg" },
       { name: "vin rouge", quantity: "75", unit: "cl" },
       { name: "carotte", quantity: "3", unit: "pièces" },
       { name: "oignon", quantity: "2", unit: "pièces" },
@@ -72,7 +72,7 @@ export const recipesDB = [
       { name: "bouquet garni", quantity: "1", unit: "pièce" }
     ],
     steps: [
-      "Couper le bœuf en morceaux de 3 cm et faire revenir avec les lardons dans une cocotte.",
+      "Couper le boeuf en morceaux de 3 cm et faire revenir avec les lardons dans une cocotte.",
       "Ajouter les oignons et les carottes coupés en morceaux, puis faire dorer.",
       "Saupoudrer de farine, mélanger, puis ajouter le vin rouge et le bouquet garni.",
       "Porter à ébullition, puis couvrir et laisser mijoter à feu doux pendant 2h30.",
@@ -91,7 +91,7 @@ export const recipesDB = [
     ingredients: [
       { name: "laitue", quantity: "1", unit: "pièce" },
       { name: "tomate", quantity: "4", unit: "pièces" },
-      { name: "œuf", quantity: "3", unit: "pièces" },
+      { name: "oeuf", quantity: "3", unit: "pièces" },
       { name: "thon", quantity: "200", unit: "g" },
       { name: "olive", quantity: "100", unit: "g" },
       { name: "haricot vert", quantity: "200", unit: "g" },
@@ -99,11 +99,11 @@ export const recipesDB = [
       { name: "anchois", quantity: "8", unit: "filets" }
     ],
     steps: [
-      "Faire cuire les œufs durs pendant 9 minutes et les haricots verts pendant 10 minutes.",
+      "Faire cuire les oeufs durs pendant 9 minutes et les haricots verts pendant 10 minutes.",
       "Laver et essorer la laitue, puis la déchirer en morceaux dans un saladier.",
       "Couper les tomates en quartiers et le poivron en lanières.",
       "Disposer harmonieusement tous les ingrédients sur le lit de salade.",
-      "Ajouter le thon émietté, les œufs coupés en quartiers, les olives et les filets d'anchois.",
+      "Ajouter le thon émietté, les oeufs coupés en quartiers, les olives et les filets d'anchois.",
       "Préparer une vinaigrette avec huile d'olive, vinaigre et moutarde, puis arroser la salade."
     ]
   },
@@ -167,15 +167,15 @@ export const recipesDB = [
     image: "../ressources/recipes/mousse-chocolat.jpg",
     ingredients: [
       { name: "chocolat noir", quantity: "200", unit: "g" },
-      { name: "œuf", quantity: "6", unit: "pièces" },
+      { name: "oeuf", quantity: "6", unit: "pièces" },
       { name: "sucre", quantity: "50", unit: "g" },
       { name: "beurre", quantity: "30", unit: "g" }
     ],
     steps: [
       "Faire fondre le chocolat avec le beurre au bain-marie, puis laisser refroidir.",
-      "Séparer les blancs des jaunes d'œufs.",
+      "Séparer les blancs des jaunes d'oeufs.",
       "Fouetter les jaunes avec le sucre jusqu'à ce que le mélange blanchisse.",
-      "Incorporer délicatement le chocolat fondu aux jaunes d'œufs.",
+      "Incorporer délicatement le chocolat fondu aux jaunes d'oeufs.",
       "Monter les blancs en neige ferme et les incorporer délicatement à la préparation.",
       "Répartir dans des ramequins et réfrigérer au moins 3 heures avant de servir."
     ]
@@ -220,7 +220,7 @@ export const recipesDB = [
     ingredients: [
       { name: "pâte brisée", quantity: "1", unit: "rouleau" },
       { name: "lardons", quantity: "200", unit: "g" },
-      { name: "œuf", quantity: "3", unit: "pièces" },
+      { name: "oeuf", quantity: "3", unit: "pièces" },
       { name: "crème fraîche", quantity: "20", unit: "cl" },
       { name: "lait", quantity: "10", unit: "cl" },
       { name: "muscade", quantity: "1", unit: "pincée" },
@@ -229,9 +229,9 @@ export const recipesDB = [
     steps: [
       "Préchauffer le four à 180°C et étaler la pâte brisée dans un moule à tarte.",
       "Faire revenir les lardons dans une poêle sans ajout de matière grasse.",
-      "Battre les œufs avec la crème fraîche et le lait, puis assaisonner avec sel, poivre et muscade.",
+      "Battre les oeufs avec la crème fraîche et le lait, puis assaisonner avec sel, poivre et muscade.",
       "Répartir les lardons sur le fond de tarte.",
-      "Verser le mélange œufs-crème et parsemer de gruyère râpé.",
+      "Verser le mélange oeufs-crème et parsemer de gruyère râpé.",
       "Enfourner pendant 30 minutes jusqu'à ce que la quiche soit dorée et l'appareil pris."
     ]
   },
@@ -297,7 +297,7 @@ export const recipesDB = [
     image: "../ressources/recipes/tiramisu.jpg",
     ingredients: [
       { name: "mascarpone", quantity: "250", unit: "g" },
-      { name: "œuf", quantity: "3", unit: "pièces" },
+      { name: "oeuf", quantity: "3", unit: "pièces" },
       { name: "sucre", quantity: "80", unit: "g" },
       { name: "café", quantity: "15", unit: "cl" },
       { name: "biscuit cuillère", quantity: "24", unit: "pièces" },
@@ -305,7 +305,7 @@ export const recipesDB = [
       { name: "amaretto", quantity: "2", unit: "cuillères à soupe" }
     ],
     steps: [
-      "Séparer les blancs des jaunes d'œufs.",
+      "Séparer les blancs des jaunes d'oeufs.",
       "Fouetter les jaunes avec le sucre jusqu'à ce que le mélange blanchisse, puis ajouter le mascarpone.",
       "Monter les blancs en neige et les incorporer délicatement à la préparation au mascarpone.",
       "Préparer le café, le laisser refroidir et y ajouter l'amaretto.",
@@ -352,7 +352,7 @@ export const recipesDB = [
       { name: "oignon", quantity: "1", unit: "kg" },
       { name: "beurre", quantity: "50", unit: "g" },
       { name: "farine", quantity: "2", unit: "cuillères à soupe" },
-      { name: "bouillon de bœuf", quantity: "1.5", unit: "l" },
+      { name: "bouillon de boeuf", quantity: "1.5", unit: "l" },
       { name: "vin blanc", quantity: "10", unit: "cl" },
       { name: "pain", quantity: "6", unit: "tranches" },
       { name: "gruyère", quantity: "150", unit: "g" },
@@ -403,7 +403,7 @@ export const recipesDB = [
     image: "../ressources/recipes/lasagnes.jpg",
     ingredients: [
       { name: "pâtes à lasagne", quantity: "12", unit: "plaques" },
-      { name: "bœuf haché", quantity: "500", unit: "g" },
+      { name: "boeuf haché", quantity: "500", unit: "g" },
       { name: "carotte", quantity: "2", unit: "pièces" },
       { name: "céleri", quantity: "1", unit: "branche" },
       { name: "oignon", quantity: "1", unit: "pièce" },
@@ -433,7 +433,7 @@ export const recipesDB = [
     vegetarian: true,
     image: "../ressources/recipes/creme-brulee.jpg",
     ingredients: [
-      { name: "jaune d'œuf", quantity: "6", unit: "pièces" },
+      { name: "jaune d'oeuf", quantity: "6", unit: "pièces" },
       { name: "crème fraîche", quantity: "50", unit: "cl" },
       { name: "sucre", quantity: "75", unit: "g" },
       { name: "vanille", quantity: "1", unit: "gousse" },
@@ -441,8 +441,8 @@ export const recipesDB = [
     ],
     steps: [
       "Préchauffer le four à 100°C et porter la crème à ébullition avec la gousse de vanille fendue.",
-      "Fouetter les jaunes d'œufs avec le sucre jusqu'à ce que le mélange blanchisse.",
-      "Verser la crème chaude sur le mélange œufs-sucre en remuant constamment.",
+      "Fouetter les jaunes d'oeufs avec le sucre jusqu'à ce que le mélange blanchisse.",
+      "Verser la crème chaude sur le mélange oeufs-sucre en remuant constamment.",
       "Répartir la préparation dans des ramequins et les placer dans un bain-marie.",
       "Cuire au four pendant 35-40 minutes jusqu'à ce que la crème soit prise mais encore tremblotante.",
       "Refroidir, puis saupoudrer de sucre roux et caraméliser avec un chalumeau ou sous le gril du four."
@@ -459,7 +459,7 @@ export const recipesDB = [
     ingredients: [
       { name: "nouilles de riz", quantity: "200", unit: "g" },
       { name: "crevette", quantity: "300", unit: "g" },
-      { name: "œuf", quantity: "2", unit: "pièces" },
+      { name: "oeuf", quantity: "2", unit: "pièces" },
       { name: "tofu", quantity: "100", unit: "g" },
       { name: "pousse de soja", quantity: "100", unit: "g" },
       { name: "carotte", quantity: "1", unit: "pièce" },
@@ -475,7 +475,7 @@ export const recipesDB = [
       "Faire tremper les nouilles de riz dans l'eau tiède pendant 15 minutes, puis les égoutter.",
       "Dans un wok chaud, faire revenir les crevettes décortiquées jusqu'à ce qu'elles soient roses, puis les réserver.",
       "Faire revenir le tofu coupé en dés jusqu'à ce qu'il soit doré, puis ajouter les carottes râpées.",
-      "Pousser les ingrédients sur le côté du wok et faire cuire les œufs brouillés.",
+      "Pousser les ingrédients sur le côté du wok et faire cuire les oeufs brouillés.",
       "Ajouter les nouilles, les sauces, le sucre et le jus de citron vert, puis mélanger rapidement.",
       "Incorporer les crevettes, les pousses de soja, les ciboules émincées et parsemer de cacahuètes concassées."
     ]
@@ -707,7 +707,7 @@ export const recipesDB = [
     ingredients: [
       { name: "farine", quantity: "150", unit: "g" },
       { name: "beurre", quantity: "75", unit: "g" },
-      { name: "œuf", quantity: "4", unit: "pièces" },
+      { name: "oeuf", quantity: "4", unit: "pièces" },
       { name: "sucre", quantity: "1", unit: "pincée" },
       { name: "sel", quantity: "1", unit: "pincée" },
       { name: "glace vanille", quantity: "500", unit: "ml" },
@@ -718,7 +718,7 @@ export const recipesDB = [
       "Préparer la pâte à choux : porter à ébullition 25cl d'eau avec le beurre, le sel et le sucre.",
       "Hors du feu, ajouter la farine d'un coup et mélanger vigoureusement jusqu'à obtenir une pâte homogène.",
       "Remettre sur feu doux et dessécher la pâte jusqu'à ce qu'elle se détache des parois.",
-      "Incorporer les œufs un à un hors du feu en mélangeant bien entre chaque ajout.",
+      "Incorporer les oeufs un à un hors du feu en mélangeant bien entre chaque ajout.",
       "Façonner des petits choux sur une plaque et les cuire à 180°C pendant 25-30 minutes.",
       "Préparer la sauce au chocolat, garnir les choux de glace à la vanille et napper de chocolat chaud."
     ]
@@ -726,13 +726,13 @@ export const recipesDB = [
   {
     id: 28,
     title: "Chili con carne",
-    description: "Un plat mexicain épicé à base de bœuf haché, haricots rouges et épices.",
+    description: "Un plat mexicain épicé à base de boeuf haché, haricots rouges et épices.",
     duration: 60,
     category: "plat",
     vegetarian: false,
     image: "../ressources/recipes/chili-con-carne.jpg",
     ingredients: [
-      { name: "bœuf haché", quantity: "500", unit: "g" },
+      { name: "boeuf haché", quantity: "500", unit: "g" },
       { name: "haricot rouge", quantity: "400", unit: "g" },
       { name: "tomate", quantity: "800", unit: "g" },
       { name: "poivron", quantity: "2", unit: "pièces" },
