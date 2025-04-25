@@ -401,8 +401,32 @@ iframe {
   margin: 1em;
 }
 
+.video-youtube {
+  display: flex;
+  justify-content: space-around;
+}
+
 .bx-wrapper {
   margin: auto;
+}
+
+.bx-wrapper img {
+  margin: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  iframe {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 780px) {
+  .video-youtube {
+    justify-content: center;
+    flex-direction: column;
+  }
+  iframe {
+    width: 80%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

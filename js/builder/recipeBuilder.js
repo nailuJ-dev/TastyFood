@@ -8,7 +8,15 @@ import {recipesDB} from "../datas/recipesDatasNew.js";
 function getRecipeIds() {
     return recipesDB.map(recipe => recipe.id);
 }
+
+let idTab= getRecipeIds();
   
+// collect the description according to the id
+function getNameById(id) {
+    const recipe = recipesDB.find(recipe => recipe.id === id);
+    return recipe ? recipe.name : null;
+}
+
 // collect the description according to the id
 function getDescriptionById(id) {
     const recipe = recipesDB.find(recipe => recipe.id === id);
@@ -60,5 +68,19 @@ console.log(getStepsById(2));
 /*                             AFFICHAGE DANS HTML                           */ 
 /*************************************************************************** */
 
+function createTitle(idTab){
+    let placeTitle = document.getElementById('recipe-header-page');
+	
+	if (!placeTitle) {
+	  console.error(`Contaneur de titre introuvable`);
+	  return;
+	}
+    console.log(idTab),
+    console.log("je suis dans la fonction")
+    placeTitle.innerHTML=
+    `
+    <h2 class="title-header">${idTab[id].name}</h2>
+    `
+}
 
-
+createTitle(idTab[id])

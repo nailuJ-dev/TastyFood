@@ -5,6 +5,14 @@ iframe {
 	
 }
 
+
+.video-youtube{
+    display:flex;
+    justify-content:space-around;
+}
+
+
+
 .bx-wrapper{
     margin:auto;
    
@@ -12,8 +20,28 @@ iframe {
 
 
 
-@media screen and (max-width: 780px) {
-    iframe{
-        
+.bx-wrapper img {
+    margin:auto;
+}
+
+
+@media screen and (max-width: 1200px) {
+     iframe{
+         width:60%;
     }
+}    
+    
+
+
+@media screen and (max-width: 780px) {
+    .video-youtube{
+        justify-content:center;
+        flex-direction:column;
+    }
+    
+    
+    iframe{
+         width:80%;
+    }
+   
 }
