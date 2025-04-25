@@ -95,7 +95,7 @@ ul {
 }
 
 .home-container .home-article {
-  border: 1px solid rgb(163, 109, 62);
+  border: 1px solid #a36d3e;
   padding: 1em;
   margin: 2em;
 }
@@ -224,25 +224,32 @@ select {
   .home-container {
     width: 95%;
   }
+
   .mb-3 {
     display: block;
   }
+
   .version-grand-ecran {
     display: none;
   }
+
   .home-article {
     margin: 0;
   }
+
   h1 {
     padding: 1em 0;
   }
+
   h3 {
     padding: 1em 0;
   }
+
   .footer-flex {
     justify-content: center;
     flex-direction: column;
   }
+
   .reseaux-sociaux {
     height: auto;
   }
@@ -266,6 +273,10 @@ select {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 1.25rem;
   row-gap: 2rem;
+}
+
+.recipes-main-section {
+  padding-top: 2em;
 }
 
 .recipe-card {
@@ -378,9 +389,11 @@ select {
   .recipes-main-generated-area {
     grid-template-columns: 1fr 1fr;
   }
+
   .recipe-image-container {
     height: 15rem;
   }
+
   .recipe-bottom-container a {
     margin-top: 1rem;
   }
@@ -389,45 +402,15 @@ select {
   .recipes-main-generated-area {
     grid-template-columns: 1fr;
   }
+
   .recipe-image-container {
     height: 15rem;
   }
+
   .recipe-bottom-container a {
     margin-top: 1rem;
   }
 }
-<<<<<<< HEAD
-iframe {
-  width: 40%;
-  margin: 1em;
-}
-
-.video-youtube {
-  display: flex;
-  justify-content: space-around;
-}
-
-.bx-wrapper {
-  margin: auto;
-}
-
-.bx-wrapper img {
-  margin: auto;
-}
-
-@media screen and (max-width: 1200px) {
-  iframe {
-    width: 60%;
-  }
-}
-@media screen and (max-width: 780px) {
-  .video-youtube {
-    justify-content: center;
-    flex-direction: column;
-  }
-  iframe {
-    width: 80%;
-=======
 /* ..............GENERALITES...............*/
 body * {
   box-sizing: border-box;
@@ -519,6 +502,7 @@ body {
   .left-side {
     margin-left: 2em;
   }
+
   #recipe-main {
     margin: 0;
   }
@@ -527,11 +511,44 @@ body {
   .mediatel {
     display: block;
   }
+
   .left-side {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
->>>>>>> 43f166b84a14909c7b0c7c18e0a548be18c85041
+  }
+}
+iframe {
+  width: 40%;
+  margin: 1em;
+}
+
+.video-youtube {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bx-wrapper {
+  margin: auto;
+}
+
+.bx-wrapper img {
+  margin: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  iframe {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 780px) {
+  .video-youtube {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  iframe {
+    width: 80%;
   }
 }
 
