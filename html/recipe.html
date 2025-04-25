@@ -22,8 +22,8 @@
     	<nav class="version-grand-ecran">
     	    <ul>
     	       <li><a  class="home-bouton" href="homepage.html">Accueil</a></li> 
-    	        <li> <a class="home-bouton" href="recipe.html">Nos recettes</a></li>
-    	        <li> <a class="home-bouton" href="#">Contact</a></li>
+    	        <li> <a class="home-bouton" href="recipe_index.html">Nos recettes</a></li>
+    	        <li> <a class="home-bouton" href="homepage.html#formulaire">Contact</a></li>
     	        <li><a class="home-bouton" href="ressources.html">Ressources</a></li> 
     	    
 			</ul>
@@ -43,8 +43,8 @@
       			<div class="collapse navbar-collapse" id="mainNav">
      		   <ul class="navbar-nav mx-auto">
          		 <li class="nav-item"><a class="nav-link" href="homepage.html">Accueil</a></li>
-         		 <li class="nav-item"><a class="nav-link" href="recipe.html">Nos recettes</a></li>
-         		 <li class="nav-item"><a class="nav-link" href="#formulaire">Contact</a></li>
+         		 <li class="nav-item"><a class="nav-link" href="recipe_index.html">Nos recettes</a></li>
+         		 <li class="nav-item"><a class="nav-link" href="homepage.html#formulaire">Contact</a></li>
         		 <li class="nav-item"><a class="nav-link" href="ressources.html">Ressources</a></li>
       		  </ul>
      	  	  </div>
@@ -58,9 +58,8 @@
         <p>Pour 4 personnes</p>
     </header>
     <main>
-        <img id="recipe.img" src="../ressources/recipes/" alt="image de la recette"/>
         <section class="recipe.steps">
-            <h3>Préparation</h3>
+        
             <div class="flex-preparation">
                 <ul>
                     <li></li>
@@ -91,7 +90,8 @@
             
         </section>
         
-
+    </header>
+    <main id="recipe-main">
 
     </main>
     
@@ -109,5 +109,5 @@
 </body>
 
     <script type="text/javascript" src="../js/datas/recipesDatas.js" defer></script>
-    <script type="module" src="../js/builder/recipeBuilder.js" defer></script>
+    <script type="module" src="../js/builder/recipeBuilderAlternate.js" defer></script>
 </html>

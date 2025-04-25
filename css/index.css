@@ -396,6 +396,7 @@ select {
     margin-top: 1rem;
   }
 }
+<<<<<<< HEAD
 iframe {
   width: 40%;
   margin: 1em;
@@ -426,6 +427,111 @@ iframe {
   }
   iframe {
     width: 80%;
+=======
+/* ..............GENERALITES...............*/
+body * {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  color: #A36D3E;
+  background-color: white;
+  line-height: 1.6em;
+  margin: 0;
+}
+
+/* ..............LAYOUT...............*/
+.flex {
+  display: flex;
+}
+
+.left-side {
+  width: 70%;
+  margin-left: 4em;
+}
+
+.right-side {
+  padding-right: 4em;
+}
+
+.content {
+  justify-content: space-between;
+}
+
+.top-description {
+  justify-content: space-around;
+}
+
+/* ..............HEADER...............*/
+#recipe-header-page {
+  text-align: center;
+  padding-top: 1em;
+}
+#recipe-header-page h2 {
+  font-family: "Boldonse", sans-serif;
+  font-size: 3.2rem;
+}
+
+/* ..............MAIN.................*/
+#recipe-main {
+  margin: 0 0 0 4em;
+}
+
+.img-contenair {
+  justify-content: center;
+}
+
+.description-recipe .recipe-presentation {
+  text-align: center;
+}
+.description-recipe img {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.right-side {
+  background-color: #EED7C4;
+}
+.right-side h3 {
+  padding-left: 1rem;
+}
+.right-side ul {
+  padding-inline-start: 1em;
+  padding-inline-end: 1em;
+}
+.right-side .one-ingredient {
+  border-bottom: 1px dotted;
+}
+
+/* ..............MAIN.................*/
+.home-footer {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .left-side {
+    margin-left: 2em;
+  }
+  #recipe-main {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 780px) {
+  .mediatel {
+    display: block;
+  }
+  .left-side {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+>>>>>>> 43f166b84a14909c7b0c7c18e0a548be18c85041
   }
 }
 
