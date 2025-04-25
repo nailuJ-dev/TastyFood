@@ -441,6 +441,7 @@ body {
 
 .right-side {
   padding-right: 4em;
+  padding-top: 2em;
 }
 
 .content {
@@ -546,7 +547,10 @@ iframe {
     justify-content: center;
     flex-direction: column;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> c675ba93b503ff30c7b9e2f6fc67b3502133998b
   iframe {
     width: 80%;
   }
