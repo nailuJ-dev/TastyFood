@@ -39,35 +39,43 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('recipe-header-page').innerHTML = titleElement;
 
   const detailsHTML = `
-    <div class="recipe-header">
-      <img src="${recipe.image}" alt="${recipe.title}" class="recipe-detail-image">
-      <div class="recipe-info">
-        <p class="category-tag category-${recipe.category}">${recipe.category}</p>
-        ${recipe.vegetarian ? '<p class="vegetarian-badge">Veggie <i class="fa-solid fa-seedling fa-lg veggie-icon" style="color: #13c328;"></i></p>' : ''}
+    <div class="content flex mediatel">
+      <div class = "left-side">
+        <section class="description-recipe">
+          <h3>Description</h3>
+          <div class= "top-description flex">
+            <p class="category-tag category-${recipe.category}"><strong>Catégorie de la recette:</strong> ${recipe.category} </p>
+            ${recipe.vegetarian ? '<p class="vegetarian-badge">Veggie <i class="fa-solid fa-seedling fa-lg veggie-icon" style="color: #13c328;"></i>  </p>' : ''}
+            <p class="duration-badge">   <strong>Préparation:</strong> ${formatDuration(recipe.duration)}</p>
+          </div>
+          <p class="recipe-presentation">${recipe.description}</p>
+          <div class= "img-contenair flex">
+            <img src="${recipe.image}" alt="${recipe.title}" class="recipe-detail-image">
+          </div>
+          </section>
+        
+        <article class="recipe-steps">
+          <h3>Préparation</h3>
+          <ol>
+            ${recipe.steps.map(step => `<li>${step}</li>`).join('')}
+          </ol>
+        </article>
       </div>
-      <p class="duration-badge">Préparation: ${formatDuration(recipe.duration)}</p>
+        
+      <div class = "right-side">
+        <article class ="recipe-ingredients">
+          <h3>Ingrédients</h3>
+          <ul>
+            ${recipe.ingredients.map(ingredient => 
+              `<li class="one-ingredient">${ingredient.quantity} ${ingredient.unit} de ${ingredient.name}</li>`
+            ).join('')}
+          </ul>
+        </article>
+      </div>
     </div>
+
     
-    <article class="recipe-description">
-        <h3>Description</h3>
-        <p>${recipe.description}</p>
-    </article>
     
-    <article class="recipe-ingredients">
-      <h3>Ingrédients</h3>
-      <ul>
-        ${recipe.ingredients.map(ingredient => 
-          `<li>${ingredient.quantity} ${ingredient.unit} de ${ingredient.name}</li>`
-        ).join('')}
-      </ul>
-    </article>
-    
-    <article class="recipe-steps">
-      <h3>Préparation</h3>
-      <ol>
-        ${recipe.steps.map(step => `<li>${step}</li>`).join('')}
-      </ol>
-    </article>
   `;
   
   document.getElementById('recipe-main').innerHTML = detailsHTML;
